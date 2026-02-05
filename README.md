@@ -108,4 +108,5 @@ It demonstrates how business logic can be validated in spreadsheets before imple
 ## Author
 
 Bayu Chandra Putra
+
 Data Analyst
