@@ -1,111 +1,107 @@
-# 📊 Store Performance Analytics Dashboard (Excel)
+# 📊 Retail Business Analytics Dashboard (Excel)
 
-## Overview
+## 🧠 Overview
+<img width="6443" height="3492" alt="Dashboard Preview" src="https://github.com/user-attachments/assets/9f860b7d-4ed3-4739-ac3b-a9e8d57d5043" />
 
 This project demonstrates an end-to-end analytics workflow built entirely in Microsoft Excel, transforming raw operational data into a weekly performance dashboard.
 
-The dashboard tracks store performance across multiple behavioral funnels:
+The dashboard evaluates business performance across the behavioral funnel:
 
-* App Users
-* Store View Activity
-* Product Link Shared
-* Orders
-* Order Revenue
+* 📱 App Users
+* 👀 Store Views
+* 🔗 Product Link Shared
+* 🛒 Orders
+* 💰 Order Revenue
 
-Instead of manually calculating metrics, the file simulates a real analytics pipeline using lookup logic and aggregation modeling.
+Instead of manual calculation, the workbook simulates a real analytics pipeline using lookup logic and aggregation modeling.
 
 ---
 
-## Data Architecture
-
-The workbook is structured as a layered data model:
+## 🗂️ Data Architecture
 
 ### 1. Raw Event Tables
 
-These sheets represent different user activities (simulating database tables):
+Each sheet represents event-level activity (similar to database tables):
 
 * `Store View` → users visiting store pages
-* `Product Link Shared` → users sharing product links
+* `Product Link Shared` → engagement activity
 * `Order` → transaction events
-* `Order Revenue` → payment confirmation & revenue data
+* `Order Revenue` → payment confirmation & revenue
 * `Active App User` → daily active users
-
-Each sheet contains timestamped event-level data.
 
 ---
 
-### 2. Analytics Layer (Transformation Layer)
+### 2. Analytics Layer (Transformation)
 
 Sheet: **Analytics**
 
-This sheet acts as a semantic model built using Excel formulas:
+Acts as a semantic model built using Excel formulas:
 
-Key transformations:
-
-* XLOOKUP joins between tables
-* Status validation (Paid vs Not Paid)
-* Week grouping (Week Num & Week Range)
+* `XLOOKUP` joins between tables
+* Paid vs Not Paid validation
+* Weekly grouping (Week Num & Week Range)
 * Monthly labeling
-* Deduplication logic for unique users
+* Unique user logic
 
-Essentially this sheet functions similar to a SQL transformation layer.
+This layer functions similarly to a SQL transformation stage.
 
 ---
 
 ### 3. Aggregation Layer
 
-Pivot tables are created from the Analytics sheet to compute metrics:
-
-Metrics calculated:
+Pivot tables aggregate the analytics dataset into metrics:
 
 * Weekly Active Users
 * Weekly Unique Users
 * Weekly Orders
 * Weekly Revenue
 
-The pivot tables serve as an OLAP cube inside Excel.
+The pivot tables act as an OLAP cube inside Excel.
 
 ---
 
 ### 4. Visualization Layer
 
-Charts are built on top of pivot outputs:
+Charts visualize weekly performance trends:
 
-* Weekly Number of Order Revenue
-* Weekly Number of Orders
-* Weekly Unique Users
-* Weekly Users
-
-Pivot output is referenced through helper tables to allow flexible axis labeling (week ranges instead of week numbers).
+* 📈 Weekly Order Revenue
+* 📦 Weekly Orders
+* 👤 Weekly Users
+* 🧍 Weekly Unique Users
 
 ---
 
-## Key Excel Concepts Demonstrated
+## 🔍 Key Insights
 
-* Data modeling in spreadsheets
-* Multi-table joins using XLOOKUP
-* Handling event vs unique user metrics
-* Pivot tables as aggregation engine
-* Separation of semantic layer & visualization layer
-* Building dashboards without BI tools
+* There is a simultaneous drop in users, orders, and revenue in early April
+* Indicates traffic disruption rather than product issue
+* Recovery afterwards suggests campaign or seasonal effect
 
 ---
 
-## Why This Project Matters
+## 🛠 Tools Used
 
-Many analytics roles require validating business logic before data warehouse implementation.
-This project shows how a complete analytics workflow can be prototyped using spreadsheet modeling before moving to SQL/BI environments.
-
-It mirrors real analytics architecture:
-
-Raw Events → Transformation → Aggregation → Visualization
+* Microsoft Excel
+* Pivot Tables
+* XLOOKUP
+* Dynamic Array Functions
+* Spreadsheet Data Modeling
 
 ---
 
-## Tools Used
+## 🎯 Why This Project Matters
 
-* Microsoft Excel (Pivot Tables, XLOOKUP, Dynamic Arrays)
-* Spreadsheet Data Modeling Techniques
+This project replicates a simplified BI workflow:
+
+**Raw Events → Transformation → Aggregation → Visualization → Insight**
+
+It demonstrates how business logic can be validated in spreadsheets before implementing in SQL/BI tools.
+
+---
+
+## 📁 File
+
+`Store Performance Analytics.xlsx` — contains full working dashboard and data model
 
 ---
 
