@@ -109,4 +109,6 @@ It demonstrates how business logic can be validated in spreadsheets before imple
 
 Bayu Chandra Putra
 
-Data Analyst
+
+← Back to Portfolio Index:  
+https://github.com/bayucp30/portfolio-data-analyst
